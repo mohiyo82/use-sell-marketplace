@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@nestjs/jwt": "^11.0.1",
+    "@nestjs/passport": "^11.0.5",
+    "cloudinary": "^2.8.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.2",
+    "multer-storage-cloudinary": "^2.2.1",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1"
+  }
+}

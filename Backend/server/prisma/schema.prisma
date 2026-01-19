@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql" // ya "mysql", "sqlite", etc.
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+model User {
+  id        Int       @id @default(autoincrement())
+  role      Role      @default(USER)
+  name      String
+  email     String    @unique
+  password  String
+  products  Product[] // Relation to Product
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  isActive  Boolean  @default(false)
+}
+
+model Product {
+  id           Int      @id @default(autoincrement())
+  title        String
+  category     String
+  mobileBrand  String?
+  ptaStatus    String?
+  condition    String?
+  description  String
+  price        Int
+  location     String
+  contactName  String
+  contactPhone String
+  status       String?
+  images       String[]
+  acceptTerms  Boolean
+
+  userId Int?        // ❗ Make optional
+  user   User?       @relation(fields: [userId], references: [id])
+
+   createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
