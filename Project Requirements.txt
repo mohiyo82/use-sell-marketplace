@@ -1,0 +1,20 @@
+Project Requirements
+
+To run this project successfully, please make sure you have the following installed:
+
+Frontend Requirements:
+
+Node.js and npm (to install dependencies using npm install)
+
+Visual Studio Code (or any preferred code editor)
+
+Backend Requirements:
+
+Node.js installed on your system
+
+PostgreSQL with pgAdmin for database management
+
+Postman for testing API endpoints
+
+⚠️ Note: If you face any issues running the project, please contact me at mohiyodin27@gmail.com
+.
